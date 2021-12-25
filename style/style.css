@@ -7,7 +7,36 @@ body {
     text-decoration: none;
 }
 
+header {
+    min-height: 350px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+}
 
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url(/assets/profile.JPG);
+    background-size: cover;
+}
+
+.profile-name {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.subtext{
+    margin-top: 8px;
+}
 
 footer {
     min-height: 100px;
