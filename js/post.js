@@ -11,12 +11,29 @@
      getPost();
  }
  
+
+ const getPostIdParam = () => {
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     return urlParams.get("id");
+ }
  const getPost = () => {
-     // CODE GOES HERE
+     const postId = getPostIdParam();
+     const url = `${API_URL}${postId}`;
+     fetch(url, {
+         method: "GET"
+     })
+     .then(res => res.json())
+     .then(data => buildPost(data));
  }
  
  const buildPost = (data) => {
-     // HINT: Convert the date number to a Date string 
+    const postDate = new Date(parseInt(data.added_date)).toDateString();
+    const postImage = `${API_BASE_URL}${data.post_image}`;
+    document.querySelector("header").style.backgroundImage = `url(${postImage})`   ;
+     document.querySelector("#individual-post-title").innerText = data.title;
+     document.querySelector("#individual-post-date").innerText = `Published on ${postDate}`;
+     document.querySelector("#individual-post-content").innerText = data.content;
  }
  
  
