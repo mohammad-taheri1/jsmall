@@ -151,3 +151,11 @@ footer {
 .nav-button.new-post-button:hover {
     background-color: #002349;
 }
+
+.navigation a{
+    text-decoration: none;
+    color: #004186;
+    border: 1px solid #004186;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
