@@ -78,10 +78,6 @@ footer {
     font-size: 14px;
 }
 
-footer span {
-    color: red;
-}
-
 .post {
     display: flex;
     border: 1px solid #d7d9db;
