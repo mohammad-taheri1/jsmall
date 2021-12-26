@@ -96,7 +96,6 @@ footer {
 
 .post-image {
     flex-basis: 40%;
-    background-image: url(/assets/img1.jfif);
     background-size:cover;
     background-position: center;
 }
