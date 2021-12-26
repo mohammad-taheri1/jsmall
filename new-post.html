@@ -12,13 +12,9 @@
     <body>
         <div class="container new-post-page">
             <header>
-                <div class="header-container">
-                    <div class="header-blog-text">
-                        <div class="title">New Post</div>
-                        <div class="subtext">
-                            Let's add a new blog post!
-                        </div>
-                    </div>
+                <div class="title">New Post</div>
+                <div class="subtext">
+                    Let's add a new blog post!
                 </div>
             </header>
             <div class="main">
@@ -32,7 +28,7 @@
                             <textarea id="form-post-content" name="post-content" placeholder="Post Content"></textarea>
                             <div>
                                 <label>Choose Image</label>
-                                <input type="file" name="post-image" accept="image/*">
+                                <input type="file" name="post-image" id="form-post-image" accept="image/*">
                             </div>
                             <button id="form-post-submit" type="button" onclick="submitNewPost()">Submit</button>
                         </form>

@@ -19,7 +19,7 @@ header {
     position: relative;
 }
 
-.home-page header {
+.home-page header, .new-post-page header {
     background-image: url(/assets/banner.jpeg);
 }
 
@@ -46,7 +46,7 @@ header::after {
     background-size: cover;
 }
 
-.profile-name {
+.profile-name, .title {
     font-size: 3em;
     font-weight: bold;
 }
