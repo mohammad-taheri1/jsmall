@@ -11,7 +11,7 @@ spin.spinner = "shark";
 console.log(figlet.textSync("Jsart"));
 
 const choices = [
-   { name: "React", value: "react", lang: "js" },
+   { name: "React (raw)", value: "react", lang: "js" },
    { name: "React + TypeScript", value: "typescript", lang: "ts" },
    { name: "React + Redux + TypeScript + Router", value: "redux-typescript-router", lang: "ts" },
    { name: "React + SCSS", value: "scss", lang: "js" },
