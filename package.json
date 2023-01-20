@@ -1,0 +1,23 @@
+{
+   "name": "jsart",
+   "version": "1.0.0",
+   "description": "This is a CLI for creating both JavaScript and TypeScript projects",
+   "author": "Mohammad Taheri",
+   "license": "MIT",
+   "main": "index.js",
+   "bin": {
+      "jsart": "index.js"
+   },
+   "scripts": {
+      "start": "node index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "keywords": [],
+   "dependencies": {
+      "child_process": "^1.0.2",
+      "commander": "^8.2.0",
+      "figlet": "^1.5.2",
+      "inquirer": "^9.1.4"
+   },
+   "type": "module"
+}
