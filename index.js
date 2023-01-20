@@ -3,6 +3,10 @@ import { exec } from "child_process";
 import fs from "fs";
 import inquirer from "inquirer";
 import figlet from "figlet";
+import ora from "ora";
+
+const spin = ora("Initializing started. please wait...");
+spin.spinner = "shark";
 
 console.log(figlet.textSync("Jsart"));
 
@@ -25,6 +29,8 @@ const jsFolders = [
    "components/home",
    "core",
    "pages",
+   "redux",
+   "router",
    "services",
    "utils",
 ];
@@ -52,35 +58,44 @@ program
          ])
          .then(({ template, inputName, lang }) => {
             const name = inputName.toLowerCase();
-            console.log({ template, name });
             let command = "";
             if (template === "react") {
                command = `npx create-react-app ${name}`;
             } else {
                command = `npx create-react-app ${name} --template ${template}`;
             }
-            console.log(command);
+            spin.start();
             exec(command, (err, stdout, stderr) => {
                if (err) {
+                  spin.fail();
+                  spin.text = "An error occured. please send the error screenshot to email:mamad.taheri.68@gmail.com";
                   console.error(err);
                   return;
                }
-               console.log("***********************************************************");
-               console.log(stdout);
+               spin.succeed();
+               spin.text = "Project inittializad successfully";
                console.log("***********************************************************");
                console.log("start adding folders and files...");
 
                // General folders
                jsFolders.forEach((path) => {
                   fs.mkdirSync(`${name}/src/${path}`, { recursive: true });
+                  console.log(path);
                });
 
                // TS folders
                if (lang === "ts") {
                   tsFolders.forEach((path) => {
                      fs.mkdirSync(`${name}/src/${path}`, { recursive: true });
+                     console.log(path);
                   });
                }
+
+               // test folder
+               fs.mkdirSync(`${name}/test`, { recursive: true });
+
+               // doc folder
+               fs.mkdirSync(`${name}/doc`, { recursive: true });
 
                console.log("we're done...");
             });
