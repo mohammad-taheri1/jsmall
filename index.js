@@ -8,7 +8,7 @@ import ora from "ora";
 const spin = ora("Initializing started. please wait...");
 spin.spinner = "shark";
 
-console.log(figlet.textSync("Jsart"));
+console.log(figlet.textSync("Jsmall"));
 
 const choices = [
    { name: "React (raw)", value: "react" },
@@ -39,7 +39,7 @@ const tsFolders = ["types"];
 
 program
    .version("1.0.0")
-   .description("This is a CLI for creating both JavaScript and TypeScript projects")
+   .description("A CLI for creating both JavaScript and TypeScript projects")
    .parse(process.argv);
 
 program
