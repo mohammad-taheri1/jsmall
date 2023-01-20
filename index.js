@@ -11,13 +11,13 @@ spin.spinner = "shark";
 console.log(figlet.textSync("Jsart"));
 
 const choices = [
-   { name: "React (raw)", value: "react", lang: "js" },
-   { name: "React + TypeScript", value: "typescript", lang: "ts" },
-   { name: "React + Redux + TypeScript + Router", value: "redux-typescript-router", lang: "ts" },
-   { name: "React + SCSS", value: "scss", lang: "js" },
-   { name: "React + Cypress", value: "cypress", lang: "js" },
-   { name: "React + Particles ", value: "particles", lang: "js" },
-   { name: "React + Particles + TypeScript", value: "particles-typescript", lang: "ts" },
+   { name: "React (raw)", value: "react" },
+   { name: "React + TypeScript", value: "typescript" },
+   { name: "React + Redux + TypeScript + Router", value: "redux-typescript-router" },
+   { name: "React + SCSS", value: "scss" },
+   { name: "React + Cypress", value: "cypress" },
+   { name: "React + Particles ", value: "particles" },
+   { name: "React + Particles + TypeScript", value: "particles-typescript" },
 ];
 
 const jsFolders = [
@@ -56,7 +56,7 @@ program
             },
             { type: "input", name: "inputName", message: "Select your project name (lower-case) : " },
          ])
-         .then(({ template, inputName, lang }) => {
+         .then(({ template, inputName }) => {
             const name = inputName.toLowerCase();
             let command = "";
             if (template === "react") {
@@ -84,7 +84,11 @@ program
                });
 
                // TS folders
-               if (lang === "ts") {
+               if (
+                  template === "typescript" ||
+                  template === "redux-typescript-router" ||
+                  template === "particles-typescript"
+               ) {
                   tsFolders.forEach((path) => {
                      fs.mkdirSync(`${name}/src/${path}`, { recursive: true });
                      console.log(path);
