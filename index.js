@@ -42,7 +42,7 @@ const jsFolders = [
 const tsFolders = ["types"];
 
 program
-   .version("1.0.3")
+   .version("1.1.0")
    .description("A CLI for creating both JavaScript and TypeScript projects")
    .parse(process.argv);
 

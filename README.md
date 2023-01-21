@@ -1,4 +1,4 @@
-# Jsmall v 1.0.0
+# Jsmall CLI
 
 a simple and powerfull CLI to create your react projects with standard foldering and also with typescript
 
