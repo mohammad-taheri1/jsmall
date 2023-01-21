@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+"use strict";
 import program from "commander";
 import { exec } from "child_process";
 import fs from "fs";
