@@ -27,6 +27,7 @@ const jsFolders = [
    "assets",
    "assets/images",
    "assets/fonts",
+   "auth",
    "components",
    "components/general",
    "components/home",
@@ -41,7 +42,7 @@ const jsFolders = [
 const tsFolders = ["types"];
 
 program
-   .version("1.0.0")
+   .version("1.0.3")
    .description("A CLI for creating both JavaScript and TypeScript projects")
    .parse(process.argv);
 

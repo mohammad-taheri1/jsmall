@@ -2,6 +2,8 @@
 
 a simple and powerfull CLI to create your react projects with standard foldering and also with typescript
 
+<img src="./jsmart-min.png" />
+
 You have a lot of Options like:
 
 * React (raw)
