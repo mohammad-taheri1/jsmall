@@ -11,16 +11,17 @@ import ora from "ora";
 const spin = ora("Initializing started. please wait...");
 spin.spinner = "shark";
 
+console.clear();
 console.log(figlet.textSync("Jsmall"));
 
 const choices = [
    { name: "React (raw)", value: "react" },
    { name: "React + TypeScript", value: "typescript" },
-   { name: "React + Redux + TypeScript + Router", value: "redux-typescript-router" },
-   { name: "React + SCSS", value: "scss" },
-   { name: "React + Cypress", value: "cypress" },
-   { name: "React + Particles ", value: "particles" },
-   { name: "React + Particles + TypeScript", value: "particles-typescript" },
+   { name: "React + Redux + TypeScript + Router (Experimental)", value: "redux-typescript-router" },
+   { name: "React + SCSS (Experimental)", value: "scss" },
+   { name: "React + Cypress (Experimental)", value: "cypress" },
+   { name: "React + Particles (Experimental)", value: "particles" },
+   { name: "React + Particles + TypeScript (Experimental)", value: "particles-typescript" },
 ];
 
 const jsFolders = [
@@ -41,10 +42,7 @@ const jsFolders = [
 
 const tsFolders = ["types"];
 
-program
-   .version("1.1.0")
-   .description("A CLI for creating both JavaScript and TypeScript projects")
-   .parse(process.argv);
+program.version("1.1.0").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
 
 program
    .command("init")
@@ -76,10 +74,11 @@ program
                   console.error(err);
                   return;
                }
+               spin.text = "Project initializad successfully";
                spin.succeed();
-               spin.text = "Project inittializad successfully";
-               console.log("***********************************************************");
-               console.log("start adding folders and files...");
+               console.log(" ");
+               console.log("Adding files and folders started. please wait...");
+               console.log(" ");
 
                // General folders
                jsFolders.forEach((path) => {
