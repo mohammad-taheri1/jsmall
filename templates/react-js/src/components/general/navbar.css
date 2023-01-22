@@ -1,0 +1,24 @@
+/* These codes are generated with jsmall CLI(https://github.com/MamadTaheri/jsmall) */
+
+.navbar {
+   background: #007bff;
+   padding: 1rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.navbar .brand {
+   color: #fff;
+   font-size: 20px;
+   cursor: pointer;
+}
+.navbar .buttons button {
+   margin: 0 6px;
+   padding: 4px 12px;
+   height: 30px;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   border-radius: 16px;
+}
