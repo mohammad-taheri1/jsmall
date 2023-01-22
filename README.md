@@ -1,6 +1,9 @@
 # jsmall
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://badge.fury.io/js/jsmall.svg)](https://badge.fury.io/js/jsmall)
+![npm](https://img.shields.io/npm/dw/jsmall)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/MamadTaheri/jsmall)
+![GitHub issues](https://img.shields.io/github/issues/MamadTaheri/jsmall)
 ## The ultimate React project scaffolder
 
 Jsmall is a command-line interface (CLI) tool that helps you create your react projects with standard foldering and also with typescript. With two simple step, jsmall will automatically create a new project and add the necessary folders and files based on best practices to get you started.
