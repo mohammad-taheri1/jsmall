@@ -15,7 +15,7 @@ spin.spinner = "shark";
 console.clear();
 console.log(figlet.textSync("J s m a ll"));
 
-program.version("1.1.1").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
+program.version("1.2.1").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
 
 program
     .command("init")
@@ -40,7 +40,6 @@ program
                     command = `npx create-react-app ${name} --template ${template}`;
                 }
                 spin.start();
-                // command = "npm --version";
                 exec(command, (err, stdout, stderr) => {
                     if (err) {
                         spin.fail();
@@ -54,9 +53,8 @@ program
                     console.log("Adding files and folders started. please wait...");
                     console.log(" ");
 
-                    // generate folders
-                    const cwd = process.cwd();
-                    generateReactContents(name, template, cwd);
+                    // generate folders and files for react projects
+                    generateReactContents(name, template);
 
                     console.log("scaffolding finished. Now you can use it. Good luck...");
                 });
