@@ -1,6 +1,6 @@
 {
    "name": "jsmall",
-   "version": "6.6.6",
+   "version": "1.2.1",
    "description": "A CLI for creating both JavaScript and TypeScript projects",
    "author": "Mohammad Taheri (mamad.taheri.68@gmail.com)",
    "license": "MIT",
