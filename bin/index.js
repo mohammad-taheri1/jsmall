@@ -3,12 +3,11 @@
 "use strict";
 import program from "commander";
 import {exec} from "child_process";
-import fs from "fs";
 import inquirer from "inquirer";
 import figlet from "figlet";
 import ora from "ora";
 import {choices} from "./choices.js";
-import {jsFolders, tsFolders} from "./foldersList.js";
+import {generateReactContents} from "./generator.react.js";
 
 const spin = ora("Initializing started. please wait...");
 spin.spinner = "shark";
@@ -16,7 +15,7 @@ spin.spinner = "shark";
 console.clear();
 console.log(figlet.textSync("J s m a ll"));
 
-program.version("1.1.0").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
+program.version("1.2.0").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
 
 program
     .command("init")
@@ -54,31 +53,11 @@ program
                     console.log("Adding files and folders started. please wait...");
                     console.log(" ");
 
-                    // General folders
-                    jsFolders.forEach((path) => {
-                        fs.mkdirSync(`${name}/src/${path}`, {recursive: true});
-                        console.log(path);
-                    });
+                    // generate folders
+                    const cwd = process.cwd();
+                    generateReactContents(name, template, cwd);
 
-                    // TS folders
-                    if (
-                        template === "typescript" ||
-                        template === "redux-typescript-router" ||
-                        template === "particles-typescript"
-                    ) {
-                        tsFolders.forEach((path) => {
-                            fs.mkdirSync(`${name}/src/${path}`, {recursive: true});
-                            console.log(path);
-                        });
-                    }
-
-                    // test folder
-                    fs.mkdirSync(`${name}/test`, {recursive: true});
-
-                    // doc folder
-                    fs.mkdirSync(`${name}/doc`, {recursive: true});
-
-                    console.log("we're done...");
+                    console.log("scaffolding finished. Now you can use it. Good luck...");
                 });
             });
     });
