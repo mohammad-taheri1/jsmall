@@ -1,4 +1,5 @@
 # jsmall
+![GitHub last commit](https://img.shields.io/github/last-commit/MamadTaheri/jsmall)
 ![GitHub](https://img.shields.io/github/license/MamadTaheri/jsmall)
 ![npm](https://img.shields.io/npm/v/jsmall)
 ![npm](https://img.shields.io/npm/dw/jsmall)
