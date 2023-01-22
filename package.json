@@ -2,14 +2,14 @@
    "name": "jsmall",
    "version": "1.1.0",
    "description": "A CLI for creating both JavaScript and TypeScript projects",
-   "author": "Mohammad Taheri",
+   "author": "Mohammad Taheri (mamad.taheri.68@gmail.com)",
    "license": "MIT",
-   "main": "index.js",
+   "main": "./bin/index.js",
    "bin": {
-      "jsmall": "./index.js"
+      "jsmall": "./bin/index.js"
    },
    "scripts": {
-      "start": "node index.js",
+      "start": "node ./bin/index.js",
       "test": "echo \"Error: no test specified\" && exit 1"
    },
    "keywords": [],

@@ -1,0 +1,12 @@
+/* These codes are generated with jsmall CLI(https://github.com/MamadTaheri/jsmall) */
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+body {
+   min-width: 100vw;
+   min-height: 100vh;
+}
