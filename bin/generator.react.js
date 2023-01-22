@@ -45,12 +45,16 @@ export const generateReactContents = (projectName, template, cwd) => {
     // General folders
     jsFolders.forEach((path) => {
         // fs.mkdirSync(`${projectName}/src/${path}`, {recursive: true});
-        const source = `${cwd}/templates/react-js/src/${path}`;
+        const source = `templates/react-js/src/${path}`;
         const destination = `${projectName}/src/${path}`;
 
         fs.cp(source, destination, {recursive: true}, err => {
             if (err) {
-                console.log(err)
+                console.log({
+                    source,
+                    destination,
+                    err
+                })
             }
         })
     });
@@ -66,13 +70,13 @@ export const generateReactContents = (projectName, template, cwd) => {
         });
     }
     // test folder
-    fs.cp(`${cwd}/templates/react-js/test`, `${projectName}/test`, {recursive: true}, err => {
+    fs.cp(`templates/react-js/test`, `${projectName}/test`, {recursive: true}, err => {
         if (err) {
             console.log(err)
         }
     })
     // doc folder
-    fs.cp(`${cwd}/templates/react-js/doc`, `${projectName}/doc`, {recursive: true}, err => {
+    fs.cp(`templates/react-js/doc`, `${projectName}/doc`, {recursive: true}, err => {
         if (err) {
             console.log(err)
         }
@@ -80,7 +84,7 @@ export const generateReactContents = (projectName, template, cwd) => {
     // General files
     jsFiles.forEach((path) => {
         // fs.mkdirSync(`${projectName}/src/${path}`, {recursive: true});
-        const source = `${cwd}/templates/react-js/src/${path}`;
+        const source = `templates/react-js/src/${path}`;
         const destination = `${projectName}/src/${path}`;
 
         fs.cp(source, destination, {recursive: true}, err => {

@@ -15,7 +15,7 @@ spin.spinner = "shark";
 console.clear();
 console.log(figlet.textSync("J s m a ll"));
 
-program.version("1.2.0").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
+program.version("1.1.1").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
 
 program
     .command("init")
@@ -40,6 +40,7 @@ program
                     command = `npx create-react-app ${name} --template ${template}`;
                 }
                 spin.start();
+                // command = "npm --version";
                 exec(command, (err, stdout, stderr) => {
                     if (err) {
                         spin.fail();
