@@ -1,11 +1,11 @@
 // These codes are generated with jsmall CLI(https://github.com/MamadTaheri/jsmall)
 
-const LoginPage = () => {
+const LogoutPage = () => {
    return (
       <div>
-         <h1>LoginPage</h1>
+         <h1>LogoutPage</h1>
       </div>
    );
 };
 
-export default LoginPage;
+export default LogoutPage;

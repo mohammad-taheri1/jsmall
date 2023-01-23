@@ -7,6 +7,8 @@ import HomePage from "./pages/home.page";
 import useTitle from "./utils/hooks/useTitle.hook";
 
 const App = () => {
+
+   // this is a custom hook that changes the application title using useLayoutEffect hook
    useTitle();
 
    return (
