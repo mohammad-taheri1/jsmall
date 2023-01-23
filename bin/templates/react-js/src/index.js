@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import logger from './core/log.service';
 
+// initializing the logger service
 logger.init();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

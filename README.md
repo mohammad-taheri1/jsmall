@@ -36,8 +36,15 @@ You can use this command to install jsmall:
 
 Then, you will see something like this:
 
-<img src="./jsmart-min.png" />
-
 ## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/MamadTaheri/jsmall/issues)
 If you are interested in contributing to jsmall, please feel free to submit a pull request or open an issue on the repository.
 
+## Changelog
+
+### v 1.2.2
+- fix LogoutComponent bug
+- add language to config.json
+- add useLayoutEffect to useTitle custom hook
+
+### v 1.2.1
+- adding code-generator for react-js folders, files and components
