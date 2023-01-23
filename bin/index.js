@@ -15,7 +15,7 @@ spin.spinner = "shark";
 console.clear();
 console.log(figlet.textSync("J s m a ll"));
 
-program.version("1.2.0").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
+program.version("1.2.1").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
 
 program
     .command("init")
@@ -53,9 +53,8 @@ program
                     console.log("Adding files and folders started. please wait...");
                     console.log(" ");
 
-                    // generate folders
-                    const cwd = process.cwd();
-                    generateReactContents(name, template, cwd);
+                    // generate folders and files for react projects
+                    generateReactContents(name, template);
 
                     console.log("scaffolding finished. Now you can use it. Good luck...");
                 });
