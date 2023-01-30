@@ -8,7 +8,7 @@ const pathCreator = (route) => {
    return path.join(__dirname, route);
 };
 
-const jsFolders = ["assets", "auth", "components", "context", "core", "pages", "redux", "router", "services", "utils"];
+const jsFolders = ["assets", "components", "context", "core", "features", "redux", "router", "services", "utils"];
 
 const jsFiles = ["App.css", "App.js", "index.css", "index.js"];
 

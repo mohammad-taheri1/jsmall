@@ -2,8 +2,8 @@
 
 import React from "react";
 import "./App.css";
-import Navbar from "./components/general/navbar.ui";
-import HomePage from "./pages/home.page";
+import Navbar from "./components/navbar/navbar.ui";
+import HomePage from "./features/home/home.page";
 import useTitle from "./utils/hooks/useTitle.hook";
 
 const App = () => {

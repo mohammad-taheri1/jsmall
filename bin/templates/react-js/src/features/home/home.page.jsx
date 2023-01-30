@@ -1,9 +1,9 @@
 // These codes are generated with jsmall CLI(https://github.com/MamadTaheri/jsmall)
 
 import React from "react";
-import HomeComponent1 from "../components/home/home1.component";
-import HomeComponent2 from "../components/home/home2.component";
-import HomeComponent3 from "../components/home/home3.component";
+import HomeComponent1 from "./home1.component.jsx";
+import HomeComponent2 from "./home2.component.jsx";
+import HomeComponent3 from "./home3.component.jsx";
 
 const HomePage = () => {
    return (
