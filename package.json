@@ -1,6 +1,6 @@
 {
    "name": "jsmall",
-   "version": "1.2.2",
+   "version": "1.2.3",
    "description": "A CLI for creating both JavaScript and TypeScript projects",
    "author": "Mohammad Taheri (mamad.taheri.68@gmail.com)",
    "license": "MIT",
@@ -23,6 +23,6 @@
    "type": "module",
    "repository": {
       "type": "git",
-      "url": "https://github.com/MamadTaheri/jsmall.git"
+      "url": "https://github.com/DevEmpower/jsmall.git"
    }
 }

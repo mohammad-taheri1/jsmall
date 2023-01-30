@@ -15,7 +15,7 @@ spin.spinner = "shark";
 console.clear();
 console.log(figlet.textSync("J s m a ll"));
 
-program.version("1.2.2").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
+program.version("1.2.3").description("A CLI for creating both JavaScript and TypeScript projects").parse(process.argv);
 
 program
     .command("init")

@@ -41,6 +41,11 @@ If you are interested in contributing to jsmall, please feel free to submit a pu
 
 ## Changelog
 
+### v 1.2.3
+- fix assets bug
+- add features folder
+- refactor auth
+
 ### v 1.2.2
 - fix LogoutComponent bug
 - add language to config.json
