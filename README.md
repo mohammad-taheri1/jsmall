@@ -14,15 +14,38 @@ Jsmall is a command-line interface (CLI) tool that helps you create your react p
 Jsmall helps developers to save time and increase productivity by automating the repetitive task of setting up a new React project, folders and files. It provides a recommended file structure for your project, includes support for TypeScript and ESLint, and provides a basic template for a new project.
   
 ## Features
-You have a lot of Options like:
+You have some  options like:
 
-* React (raw)
+* React
 * React + TypeScript
-* React + Redux + TypeScript + Router
-* React + SCSS
-* React + Cypress
-* React + Particles
-* React + Particles + TypeScript
+
+## Folder Structure
+
+```bash
+project-name
+├── doc
+│   └── docs.MD (file)
+├── src
+│   ├── assets
+│   │   ├── fonts
+│   │   └── images
+│   ├── components
+│   │   └── navbar
+│   ├── context
+│   ├── core
+│   ├── features
+│   │   ├── auth
+│   │   └── home
+│   ├── redux
+│   ├── router
+│   ├── services
+│   ├── types (just for TS projects)
+│   └── utils
+│       ├── config
+│       └── hooks
+└── test
+   └── sample.spec.js (file)
+```
 
 ## Installation
 You can use this command to install jsmall:
